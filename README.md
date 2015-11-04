@@ -10,9 +10,9 @@ Uma breve explicação de algumas funcionalidades da APP.
 - Para fazer chamada para um contacto, temos que seleccionar o contacto que desejamos. Ver na pasta Imgapp imagem "..0001 e a ...0002" depois de seleccionar, clicamos 2x, onde irá aparecer outra janela a pedir confirmação para realizar a chamada. ver imagem "...0004".
 - Para ver detalhes do contacto , mandar sms, ou fazer alterações do contacto. Primeiro selectionar contacto e depois pressionar em cima do contacto até aparecer um menuflout. (ver imagem "...0003)
 - Ao escolher ver perfil, irá aparecer os detalhes completos do contacto. Se clicarmos 2x em cima do email irá abrir uma page para esse efeito.
-- 
+
 sdk's que usei;
-Microsoft Advertising SDK for Windows Phone 8.1 (XAML)
-SQLite for Windows Phone 8.1 (SQLite.WP81, Version=3.9.1)
-Bing Maps for C#, C++, or Visual Basic
-SQLite for Windows Runtime (Windows 8.1)
+Microsoft Advertising SDK for Windows Phone 8.1 (XAML).
+SQLite for Windows Phone 8.1 (SQLite.WP81, Version=3.9.1).
+Bing Maps for C#, C++, or Visual Basic.
+SQLite for Windows Runtime (Windows 8.1).
