@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>739f30c1-ceea-4c7b-a58c-c72bfcfd12ce</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xcontact</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Class\DataBaseHelperClass.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Class\ReadAllContactsList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\amigos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\colegas.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\contactos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ContactsDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\favoritos.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SplashScreen.xaml.cs">
+      <DependentUpon>SplashScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SQLiteAsync.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Images\Menu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Background\background.jpg" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Maps\Marker-26.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Maps\Marker-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)SplashScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>

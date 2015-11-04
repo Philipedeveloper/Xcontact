@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Xcontact.DetalheContact"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Xcontact"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="0" >
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Images/Background/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <!-- header -->
+        <Grid Height="60" Margin="10,0" VerticalAlignment="Top" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Grid.Background>
+        </Grid>
+        <Border BorderBrush="#FF362D3C" BorderThickness="0" Height="60" Margin="10,0" Padding="1,0,1,2" VerticalAlignment="Top"/>
+        <Grid Height="40" Width="400" Background="#FF362D3C" VerticalAlignment="Top" Margin="0,10,0,0">
+            <!-- <Image HorizontalAlignment="Left" Height="40" Width="44" VerticalAlignment="Top" Source="Images/Menu/Menu-32b.png"/> -->
+
+            <Grid Height="40" Margin="20,0" VerticalAlignment="Top">
+                <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="Xcontact" FontSize="36" IsColorFontEnabled="True"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="10,60,10,0" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF9E9E9E" Opacity="0.25"/>
+            </Grid.Background>
+            <ListView Height="500">
+                
+            <Canvas >
+                <Ellipse x:Name="picuser" Margin="20,30,0,0" Height="160" Width="160"  Stroke="White" StrokeThickness="1"  >
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="FotoUser" ImageSource="{Binding Imagem}" />
+                    </Ellipse.Fill>
+                </Ellipse>
+            </Canvas>
+            <TextBlock x:Name="Tnome" Margin="20,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Left" Width="199"/>
+            <TextBlock x:Name="Ttelemovel" Margin="20" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Left" Width="199"/>
+            <TextBlock x:Name="Ttelcasa" Margin="20,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Left" Width="199"/>
+            <TextBlock x:Name="Tteltrabalho" Margin="20,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Left" Width="199"/>
+            <TextBlock x:Name="Tmorada" Margin="20,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Left" Width="340"/>
+                <TextBlock x:Name="Temail" Margin="20,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="18" HorizontalAlignment="Left" Width="340" DoubleTapped="Temail_DoubleTapped"/>
+
+            </ListView>
+
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="30,80,0,0" TextWrapping="Wrap" Text="PERFIL" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+    </Grid>
+</Page>

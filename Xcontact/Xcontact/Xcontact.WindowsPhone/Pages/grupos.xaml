@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Xcontact.Pages.grupos"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Xcontact.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Images/Background/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid Height="60" Margin="10,0" VerticalAlignment="Top" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Grid.Background>
+        </Grid>
+        <Border BorderBrush="#FF362D3C" BorderThickness="0" Height="60" Margin="10,0" Padding="1,0,1,2" VerticalAlignment="Top"/>
+        <Grid Height="40" Width="400" Background="#FF362D3C" VerticalAlignment="Top" Margin="0,10,0,0">
+            <!-- <Image HorizontalAlignment="Left" Height="40" Width="44" VerticalAlignment="Top" Source="Images/Menu/Menu-32b.png"/> -->
+            <Grid Height="40" Margin="20,0" VerticalAlignment="Top">
+                <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="Xcontact" FontSize="36"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="10,60,10,0" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF9E9E9E" Opacity="0.25"/>
+            </Grid.Background>
+        </Grid>
+        <!-- Content -->
+        
+    </Grid>
+</Page>

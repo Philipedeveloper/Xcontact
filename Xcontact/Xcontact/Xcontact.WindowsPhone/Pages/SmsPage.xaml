@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="Xcontact.Pages.SmsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Xcontact.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+
+        <CommandBar Foreground="Black" >
+            <CommandBar.Background>
+                <SolidColorBrush Color="#FFEFE5D3" Opacity="0.8" />
+            </CommandBar.Background>
+            <AppBarButton Icon="Send" Label="Enviar" Click="SendSms_Click"/>
+            <AppBarButton Icon="Cancel" Label="Cancelar" Click="SmsCancel"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Images/Background/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <!-- header -->
+        <Grid Height="60" Margin="10,0" VerticalAlignment="Top" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Grid.Background>
+
+        </Grid>
+        <Border BorderBrush="#FF362D3C" BorderThickness="0" Height="60" Margin="10,0" Padding="1,0,1,2" VerticalAlignment="Top"/>
+        <Grid Height="40" Width="400" Background="#FF362D3C" VerticalAlignment="Top" Margin="0,10,0,0">
+            <!-- <Image HorizontalAlignment="Left" Height="40" Width="44" VerticalAlignment="Top" Source="Images/Menu/Menu-32b.png"/> -->
+
+            <Grid Height="40" Margin="20,0" VerticalAlignment="Top">
+                <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="Xcontact" FontSize="36"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="10,0" Width="380" Grid.Row="1">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF9E9E9E" Opacity="0.25"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid>
+                <TextBox x:Name="number" Grid.Column="1" HorizontalAlignment="Left" Margin="76,78,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="273" PlaceholderText="Numero" Padding="1">
+                    <TextBox.Background>
+                        <SolidColorBrush Color="White" Opacity="0.6"/>
+                    </TextBox.Background>
+                </TextBox>
+                <TextBlock  Margin="20,78,304,0" TextWrapping="Wrap" Text="Para :" FontSize="20" TextAlignment="Center" Height="39" VerticalAlignment="Top"/>
+                <Grid Grid.ColumnSpan="2" Height="1" Margin="20,125,20,0" VerticalAlignment="Top">
+                    <Grid.Background>
+                        <SolidColorBrush Color="White" Opacity="0.75"/>
+                    </Grid.Background>
+                </Grid>
+
+            </Grid>
+
+            <StackPanel Margin="10,135,9.5,46">
+
+                <TextBox x:Name="body" Height="320" Margin="0,0,0.333,0" Padding="1"  >
+                    <TextBox.Background>
+                        <SolidColorBrush Color="White" Opacity="0.6"/>
+                    </TextBox.Background>
+                </TextBox>
+            </StackPanel>
+
+<TextBlock HorizontalAlignment="Left" Margin="20,8,0,0" TextWrapping="Wrap" Text="MENSSAGEM" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+        </Grid>
+
+    </Grid>
+</Page>

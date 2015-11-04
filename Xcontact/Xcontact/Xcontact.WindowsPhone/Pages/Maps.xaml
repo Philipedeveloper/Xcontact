@@ -1,0 +1,60 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Xcontact.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="Xcontact.Pages.Maps"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.Background>
+                <SolidColorBrush Color="#FFEFE5D3" Opacity="0.8" />
+            </CommandBar.Background>
+            <AppBarButton Icon="Target" Label="Localizar" Click="LocalizaMe"/>
+            <!--<AppBarButton Icon="Accept" Label="Voltar" Click="voltarComMorada"/>
+            <AppBarButton Icon="Cancel" Label="Cancelar"/>
+            -->
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="0" >
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Images/Background/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <!-- header -->
+        <Grid Height="60" Margin="10,0" VerticalAlignment="Top" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Grid.Background>
+        </Grid>
+        <Border BorderBrush="#FF362D3C" BorderThickness="0" Height="60" Margin="10,0" Padding="1,0,1,2" VerticalAlignment="Top"/>
+        <Grid Height="40" Width="400" Background="#FF362D3C" VerticalAlignment="Top" Margin="0,10,0,0">
+            <!-- <Image HorizontalAlignment="Left" Height="40" Width="44" VerticalAlignment="Top" Source="Images/Menu/Menu-32b.png"/> -->
+
+            <Grid Height="40" Margin="20,0" VerticalAlignment="Top">
+                <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="Xcontact" FontSize="36" IsColorFontEnabled="True"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="10,60,10,0" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF9E9E9E" Opacity="0.25"/>
+            </Grid.Background>
+            <!-- Maps control-->
+
+
+
+            <Maps:MapControl x:Name="Mymap" Margin="10,90,25,90" MapTapped="Mymap_MapTapped" BorderBrush="White" Padding="1,1,1,2"   >
+                <Maps:MapControl.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.45"/>
+                </Maps:MapControl.Background>
+            </Maps:MapControl>
+
+
+
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="30,68,0,0" TextWrapping="Wrap" Text="LOCALIZAÇÃO" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+    </Grid>
+</Page>

@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="Xcontact.Pages.EnviarEmail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Xcontact.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        
+        <CommandBar Foreground="Black">
+            <CommandBar.Background>
+                <SolidColorBrush Color="#FFEFE5D3" Opacity="0.8" />
+            </CommandBar.Background>
+            <AppBarButton Icon="Send" Label="Enviar" Click="enviarEmail" Foreground="Black"/>
+
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid Margin="0" >
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Images/Background/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <!-- header -->
+        <Grid Height="60" Margin="10,0" VerticalAlignment="Top" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="White" Opacity="0.7"/>
+            </Grid.Background>
+        </Grid>
+        <Border BorderBrush="#FF362D3C" BorderThickness="0" Height="60" Margin="10,0" Padding="1,0,1,2" VerticalAlignment="Top"/>
+        <Grid Height="40" Width="400" Background="#FF362D3C" VerticalAlignment="Top" Margin="0,10,0,0">
+            <!-- <Image HorizontalAlignment="Left" Height="40" Width="44" VerticalAlignment="Top" Source="Images/Menu/Menu-32b.png"/> -->
+
+            <Grid Height="40" Margin="20,0" VerticalAlignment="Top">
+                <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" Text="Xcontact" FontSize="36" IsColorFontEnabled="True"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="10,60,10,0" Width="380">
+            <Grid.Background>
+                <SolidColorBrush Color="#FF9E9E9E" Opacity="0.25"/>
+            </Grid.Background>
+
+
+
+            <TextBlock HorizontalAlignment="Left" Margin="20,120,0,0" TextWrapping="Wrap" Text="Enviar para:" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="Tto" Margin="20,140,40,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" InputScope="EmailSmtpAddress"/>
+            <TextBlock HorizontalAlignment="Left" Margin="20,190,0,0" TextWrapping="Wrap" Text="Nome:" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="TNome" Margin="20,210,40,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="20,260,0,0" TextWrapping="Wrap" Text="Assunto:" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox x:Name="TSubject" TextWrapping="Wrap" Margin="20,280,40,0" Text="" VerticalAlignment="Top"/>
+            <TextBox x:Name="Tbody" Margin="20,340,40,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="145" InputScope="Chat"/>
+
+
+
+
+
+
+
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="30,80,0,0" TextWrapping="Wrap" Text="EMAIL" VerticalAlignment="Top" FontSize="18" FontWeight="Bold"/>
+    </Grid>
+</Page>

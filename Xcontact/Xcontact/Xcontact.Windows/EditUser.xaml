@@ -1,0 +1,81 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Xcontact.EditUser"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Xcontact"
+    xmlns:common="using:Xcontact.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:bm="using:Bing.Maps"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
+        <x:String x:Key="AppName">My Application</x:String>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+    <Grid Background="White">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="Images/Background/background.jpg"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Text="Editar contacto" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+            
+            
+            
+        </Grid>
+
+        <StackPanel Margin="321,164,171,-626" >
+
+            <TextBlock TextWrapping="Wrap" Text="Nome" Foreground="Black"/>
+            <TextBox x:Name="Tnome" TextWrapping="Wrap" BorderBrush="Black" Foreground="Black" />
+            <TextBlock TextWrapping="Wrap" Text="Telemóvel" Foreground="Black"/>
+            <TextBox x:Name="Ttelemovel" TextWrapping="Wrap" BorderBrush="Black" Foreground="Black" />
+            <TextBlock TextWrapping="Wrap" Text="Telefone Casa" Foreground="Black"/>
+            <TextBox x:Name="Ttelcasa" TextWrapping="Wrap" BorderBrush="Black" />
+            <TextBlock TextWrapping="Wrap" Text="Telefone Trabalho" Foreground="Black"/>
+            <TextBox x:Name="Tteltrabalho" TextWrapping="Wrap" BorderBrush="Black" />
+            <TextBlock TextWrapping="Wrap" Text="Morada" Foreground="Black"/>
+            <SearchBox x:Name="SearchMorada" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="268" QuerySubmitted="searchPane_QuerySubmitted"  BorderBrush="Black" PlaceholderText="Ex. Rua da Liberdade, Seixal"/>
+            <bm:Map Credentials="I13ycNwvQJKgucLE3Ljl~gHWBnoNtZBP56XPDm877Bw~Aqj7-Ej99XxfLBpcw4mgBgwxggiu5bZr7VsN9l4_a5lSqf0tT4SrJmH6KSxdHTHY" x:Name="myMap" Height="202" ZoomLevel="17" BorderBrush="Black" HorizontalAlignment="Left" Width="268"/>
+            <!--<TextBox x:Name="Tmorada" TextWrapping="Wrap" BorderBrush="Black" />-->
+            <TextBlock TextWrapping="Wrap" Text="Email" Foreground="Black"/>
+            <TextBox x:Name="Temail" TextWrapping="Wrap" Background="White" BorderBrush="Black" />
+            <Button Content="Editar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Click="Button_Click" BorderBrush="Black" Foreground="Black" />
+            <Button Content="Eliminar Contacto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" RequestedTheme="Dark" RenderTransformOrigin="0.5,0.5" Click="DelContact" BorderBrush="Black" Foreground="Black" />
+            
+        </StackPanel>
+
+
+
+    </Grid>
+</Page>
